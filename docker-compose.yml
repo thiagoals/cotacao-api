@@ -5,4 +5,4 @@ services:
     build: .
     image: cotacao-api
     ports:
-      - "9001:9100"
+      - "8080:8081"

@@ -13,5 +13,5 @@ RUN mvn -f /home/app/pom.xml clean package -Dmaven.test.skip=true
 FROM build
 ARG PROJECT_VERSION="0.0.1-SNAPSHOT"
 COPY --from=build /home/app/target/cotacao-api-$PROJECT_VERSION.jar /usr/local/lib/cotacao-api.jar
-EXPOSE 9001
+EXPOSE 8080
 ENTRYPOINT ["java","-jar","/usr/local/lib/cotacao-api.jar"]
